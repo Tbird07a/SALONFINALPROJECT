@@ -9,7 +9,7 @@ public class Makeup {
     }
 
 
-    public Makeup(String product, int price, String effect_on_hair) {
+    public Makeup(String product, int price, String effect_on_makeup) {
         this.product = product;
         this.price = price;
         this.effect_on_makeup = effect_on_makeup;
@@ -18,11 +18,15 @@ public class Makeup {
 
 
     public void printInfo() {
-        System.out.println(product + "is a makeup product that costs $" + price + " and " + effect_on_makeup + " your face");
+        System.out.println(product + " is a makeup product that costs $" + price + " and " + effect_on_makeup);
     }
 
     public void discount() {
         this.price = price * 0.80;
         System.out.println("A 20% discount has been applied to this makeup product");
+    }
+
+    public double final_price() {
+        return price;
     }
 }

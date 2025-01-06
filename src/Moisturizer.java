@@ -13,8 +13,8 @@ public class Moisturizer extends Makeup{
 
 
 
-    public String smoothing() {
+    public void smoothing() {
         smooth = true;
-        return ("Smooth: " + true + " WOW YOUR SKIN IS SO SMOOTH");
+        System.out.println ("Smooth: " + true + " WOW YOUR SKIN IS SO SMOOTH");
     }}
 
