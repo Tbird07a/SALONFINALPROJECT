@@ -12,7 +12,7 @@ public class Moisturizer extends Makeup{
     }
 
 
-
+    // another polymorphic method
     public void smoothing() {
         smooth = true;
         System.out.println ("Smooth: " + true + " WOW YOUR SKIN IS SO SMOOTH");

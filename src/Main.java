@@ -11,7 +11,7 @@ public class Main {
         System.out.println("Hello Welcome to the Salon!");
 
         Scanner name = new Scanner(System.in);
-        System.out.print("Are you a VIP? y/n  ");
+        System.out.print("Are you a VIP? y/n  "); //Sets player's VIP Status
         String VIP_response = name.nextLine();
         if (VIP_response.equals("y")) {
             VIP = true;
@@ -26,12 +26,12 @@ public class Main {
 
 
             System.out.println("You shall have your hair done now!");
-
+            // Process for having hair done
             Scanner name1 = new Scanner(System.in);
             System.out.print("Which product would you like? TYPE C FOR CURLING SET. TYPE D FOR HAIR DYE. ");
             String product = name.nextLine();
 
-            if (product.equals("C") && alive == true) {
+            if (product.equals("C") && alive == true) { // If you buy a curling set
                 CurlingSet CurlingSet = new CurlingSet("Curling Set", 500, "burns your hair");
                 double price_product = CurlingSet.final_price();
                 if (VIP == true) {
@@ -48,7 +48,7 @@ public class Main {
             }
 
 
-            if (product.equals("D") && alive == true) {
+            if (product.equals("D") && alive == true) { // If you buy hair dye
                 Hair dye = new Hair("Hair Dye", 100000, "dyes your hair");
 
                 if (VIP) {
@@ -64,7 +64,7 @@ public class Main {
                 System.out.print("Would you like to use this product to moisturize? y/n  ");
                 String moist_response = name.nextLine();
 
-                if ((moist_response.equals("y"))) {
+                if ((moist_response.equals("y"))) { // You lose if you think you can use the product to moisturize
                     Hair.smoothing();
                     System.out.println("YOU HAVE LOST. GOODBYE");
                     alive = false;
@@ -75,13 +75,13 @@ public class Main {
                     System.out.println("That makes sense. Your hair is now dyed. The product has now been added to your total.");
 
                 }}
-            if (alive == true) {
+            if (alive == true) { // Process of getting makeup done
                 System.out.println("We shall now work on your face");
                 Scanner name3 = new Scanner(System.in);
                 System.out.print("Which product would you like? TYPE M FOR Moisturizer. TYPE B FOR BLUSH. ");
                 String product2 = name.nextLine();
 
-              if (product2.equals("M")) {
+              if (product2.equals("M")) { // If you buy moisturizer
                 Moisturizer Moisturizer = new Moisturizer("Moisturizer", 500, "makes skin smooth");
                 double price_product;
                 if (VIP) {
@@ -95,7 +95,7 @@ public class Main {
 
             }
 
-             if (product2.equals("B")) {
+             if (product2.equals("B")) { // if you buy blush
                 Makeup blush = new Makeup("blush", 1000, "puts on blush");
                 if (VIP) {
                     blush.discount();
@@ -107,7 +107,7 @@ public class Main {
 
             }
 
-             System.out.println("CONGRATS YOU MADE IT THROUGH YOUR VISIT. YOUR TOTAL IS: " + total + " BUT WE DECIDED TO PAY IT FOR YOU! GOODBYE!");
+             System.out.println("CONGRATS YOU MADE IT THROUGH YOUR VISIT. YOUR TOTAL IS: " + total + " BUT WE DECIDED TO PAY IT FOR YOU! GOODBYE!"); // how it ends
              alive = false;
             }
             }

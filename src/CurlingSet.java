@@ -11,9 +11,9 @@ public class CurlingSet extends Hair{
 
     }
 
+// if you buy it you burn your hair
 
-
-    public void burning() {
+    public void burning()  {
         burnt = true;
         System.out.println("Burnt hair: " + burnt + " OH MY GOD YOUR HAIR IS ON FIRE");
     }}

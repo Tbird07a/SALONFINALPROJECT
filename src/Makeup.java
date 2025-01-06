@@ -16,11 +16,11 @@ public class Makeup {
 
     }
 
-
+    // another polymorphic method
     public void printInfo() {
         System.out.println(product + " is a makeup product that costs $" + price + " and " + effect_on_makeup);
     }
-
+    // another polymorphic method
     public void discount() {
         this.price = price * 0.80;
         System.out.println("A 20% discount has been applied to this makeup product");
